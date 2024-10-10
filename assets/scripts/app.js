@@ -40,7 +40,7 @@ button.addEventListener('click', function (event) {
     let elemTwoName = elemTwo.querySelector('.item__title');
 
     if (!(elemOneName.innerText === "Результат")) {
-        if (elemOneInput.value.match(/^\d+$/) && elemTwoInput.value.match(/^\d+$/)) {
+        if (elemOneInput.value.match(/^\d+$/) || elemTwoInput.value.match(/^\d+$/)) {
         result = getResult();
         console.log(result);
         listInputs.forEach(function (elem) {

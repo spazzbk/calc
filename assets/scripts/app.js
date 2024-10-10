@@ -32,22 +32,32 @@ dropDownListItems.forEach(function (listItem) {
 });
 
 button.addEventListener('click', function (event) {
-    result = getResult();
-    console.log(result);
-    listInputs.forEach(function (elem) {
-        if (!elem.querySelector('.dropdown')) {
-            elem.style.visibility = 'hidden';
+    let elemOne = listInputs[0];
+    let elemOneInput = elemOne.querySelector('.item__place-input').querySelector('.input');
+    let elemOneName = elemOne.querySelector('.item__title');
+    let elemTwo = listInputs[1];
+    let elemTwoInput = elemTwo.querySelector('.item__place-input').querySelector('.input');
+    let elemTwoName = elemTwo.querySelector('.item__title');
+
+    if (!(elemOneName.innerText === "Результат")) {
+        if (elemOneInput.value.match(/^\d+$/) && elemTwoInput.value.match(/^\d+$/)) {
+        result = getResult();
+        console.log(result);
+        listInputs.forEach(function (elem) {
+            if (!elem.querySelector('.dropdown')) {
+                elem.style.visibility = 'hidden';
+            }
+        });
+        elemOneName.innerText = "Результат";
+        elemOneInput.placeholder = '';
+        elemOneInput.value = result;
+
+        elemOne.style.visibility = 'visible';
         }
-    });
-
-    let elem = listInputs[0];
-    let elemInput = elem.querySelector('.item__place-input').querySelector('.input');
-    let elemName = elem.querySelector('.item__title');
-    elemName.innerText = "Результат";
-    elemInput.placeholder = '';
-    elemInput.value = result;
-
-    elem.style.visibility = 'visible';
+        else {
+            alert('ТОЛЬКО ЧИСЛА')
+        }
+    }
 });
 
 function selectArea(figure) {

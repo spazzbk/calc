@@ -1,0 +1,70 @@
+<html lang="ru">
+<head>
+    <title>Calc</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1 class="title">Рассчет площади</h1>
+
+            <ul class="list-select">
+                <li class="list__item">
+                    <p class="item__title">Фигура</p>
+ <!--                   <div class="item__place-input">
+                        <div class="select-wrapper">
+                            <select class="select" name="select-category">
+                                <option value="1">Круг</option>
+                                <option value="2">Квадрат</option>
+                                <option value="3">Параллелограмм</option>
+                                <option value="4">Ромб</option>
+                            </select>
+                        </div>
+                    </div>-->
+
+                    <div class="item__place-input">
+                        <div class="dropdown">
+                            <button class="dropdown__button">Выберите фигуру</button>
+                            <ul class="dropdown__list">
+                                <li class="dropdown__item" data-value="circle">Круг</li>
+                                <li class="dropdown__item" data-value="parallelogram">Параллелограмм</li>
+                                <li class="dropdown__item" data-value="square">Квадрат</li>
+                                <li class="dropdown__item" data-value="rhombus">Ромб</li>
+                            </ul>
+
+                            <input class="dropdown__input-hidden" type="text" name="select-category" value="">
+                        </div>
+                    </div>
+                </li>
+
+                <li class="list__item">
+                    <p class="item__title">Радиус</p>
+                    <div class="item__place-input">
+                        <input class="input" placeholder="Введите радиус" id="first-input">
+                    </div>
+                </li>
+
+                <li class="list__item">
+                    <p class="item__title">Сторона</p>
+                    <div class="item__place-input">
+                        <input class="input" placeholder="Введите сторону" id="second-input">
+                    </div>
+                </li>
+            </ul>
+
+
+
+            <button class="btn">Рассчитать</button>
+        </div>
+    </div>
+
+    <script src="assets/scripts/dropDown.js"></script>
+    <script src="assets/scripts/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    font-family: Inter, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+}
+
+p {
+    margin: 0;
+}
+
+select {
+    border: none;
+    background-color: transparent;
+
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.select:focus {
+    outline: none;
+}
+
+input {
+    border: none
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+option {
+    padding-inline: 0;
+    padding-block-end: 0;
+    min-block-size: 0;
+}
